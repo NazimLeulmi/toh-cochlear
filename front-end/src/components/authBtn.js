@@ -12,9 +12,14 @@ const Btn = styled(Button)(({ theme }) => ({
   },
 }));
 
-function AuthBtn({ children }) {
+function AuthBtn({ children, disabled }) {
   return (
-    <Btn variant="contained" type="submit" color="secondary">
+    <Btn
+      variant="contained"
+      type="submit"
+      color="secondary"
+      disabled={disabled}
+    >
       {children}
     </Btn>
   );

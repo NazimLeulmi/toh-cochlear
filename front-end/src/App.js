@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignUp from "./pages/signup";
 import * as React from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
+import SignIn from "./pages/signin";
 
 const theme = createTheme({
   palette: {
@@ -27,7 +28,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<SignUp />} />
+          <Route exact path="/signup" element={<SignUp />} />
+          <Route exact path="/" element={<SignIn />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
